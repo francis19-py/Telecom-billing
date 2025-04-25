@@ -85,7 +85,7 @@ void modifyRecord(const char *phoneNumber)
     printf("\nRecord not found!\n");
 }
 
-//function to view payments
+//function to view records
 void viewRecords () {
     if (customerCount == 0){
         printf("\n No records to display.\n");
