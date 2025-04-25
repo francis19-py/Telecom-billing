@@ -1,4 +1,5 @@
 //Function to viewpayment for a customer
+#include "viewpayment.h"
 #include <stdio.h>
 void viewpayment (const char *phoneNumber)
 {
