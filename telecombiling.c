@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include "viewpayment.h"//header file for viewpayment retrieval
+//header file for viewpayment retrieval
 
 #define MAX_CUSTOMERS 100
 
@@ -126,7 +126,7 @@ void searchRecord(char phoneNumber[]) {
 }
  
 //Function to viewpayment for a customer
-void viewpayment (const char *phoneNumber)
+void viewPayment (const char *phoneNumber)
 {
     for (int i =0; i < customerCount; i++){
         if (strcmp(customers[i].phoneNumber, phoneNumber)==0){
@@ -179,7 +179,7 @@ int main (){
                 printf("\nEnter phone number to view payment: ");
                 scanf("%14s", phoneNumber);
                 clearInputBuffer();
-                viewpayment(phoneNumber);
+                viewPayment(phoneNumber);
                 break;
         case 5:
                 printf("\nEnter phone number to delete record:  ");
