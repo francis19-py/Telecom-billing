@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include "viewpayment.h"//header file for viewpayment retrieval
 
 #define MAX_CUSTOMERS 100
 
