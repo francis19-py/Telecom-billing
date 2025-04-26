@@ -124,7 +124,6 @@ void searchRecord(char phoneNumber[]) {
 	} 
 	printf("\nRecord not found!\n"); 
 }
- 
 //Function to viewpayment for a customer
 void viewPayment (const char *phoneNumber)
 {
@@ -188,7 +187,7 @@ int main (){
                 deleteRecord(phoneNumber); 
                 break;
         case 6:
-                printf("exiting the program . bye!");
+                printf("exiting the program . bye!\n");
                 exit(0);//ensures program exits properly
         default:
             printf("\n Invalid choice! PLease try again.\n");
