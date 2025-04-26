@@ -189,6 +189,7 @@ int main (){
                 break;
         case 6:
                 printf("exiting the program . bye!");
+                exit(0);//ensures program exits properly
         default:
             printf("\n Invalid choice! PLease try again.\n");
 
