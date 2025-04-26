@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+//header file for viewpayment retrieval
 
 #define MAX_CUSTOMERS 100
 
@@ -89,12 +90,12 @@ void modifyRecord(const char *phoneNumber)
 void viewRecords () {
     if (customerCount == 0){
         printf("\n No records to display.\n");
-        return 1;
+        return;
+    }
     printf("\n Name\tPhone Number\tUsage(min)\tTotal Bill($)\n");
     for (int i = 0; i < customerCount; i++){
         printf("%s\t%s\t%.2f\t\t%.2f\n", customers[i].name, customers[i].phoneNumber, customers[i].usage, customers[i].totalBill);
     }
-}
 }
 
 //function to delete records
@@ -125,7 +126,7 @@ void searchRecord(char phoneNumber[]) {
 }
  
 //Function to viewpayment for a customer
-void viewpayment (const char *phoneNumber)
+void viewPayment (const char *phoneNumber)
 {
     for (int i =0; i < customerCount; i++){
         if (strcmp(customers[i].phoneNumber, phoneNumber)==0){
@@ -178,7 +179,7 @@ int main (){
                 printf("\nEnter phone number to view payment: ");
                 scanf("%14s", phoneNumber);
                 clearInputBuffer();
-                viewpayent(phoneNumber);
+                viewPayment(phoneNumber);
                 break;
         case 5:
                 printf("\nEnter phone number to delete record:  ");
@@ -188,6 +189,7 @@ int main (){
                 break;
         case 6:
                 printf("exiting the program . bye!");
+                exit(0);//ensures program exits properly
         default:
             printf("\n Invalid choice! PLease try again.\n");
 
